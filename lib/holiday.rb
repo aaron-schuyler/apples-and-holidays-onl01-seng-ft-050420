@@ -73,7 +73,9 @@ def all_holidays_with_bbq(holiday_hash)
   list =[]
   holiday.each do |key, value|
     value.each do |holiday, values|
-      if values.containes?
+      if values.inclued?("BBQ")
+        list.push(holiday)
+      end
     end
   end
 end
